@@ -1,0 +1,121 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9e9e9; /* Verde claro */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Container Principal */
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Cabeçalho e Barra de Busca */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #000;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 8px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.icons span {
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+/* Seções */
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.book-grid, .publisher-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.book-grid img, .publisher-grid img {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Botão Ver Mais */
+.ver-mais {
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .book-grid, .publisher-grid {
+        justify-content: center;
+    }
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .icons {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+    .search-bar input {
+        width: 80%;
+    }
+    .book-grid img, .publisher-grid img {
+        width: 80px;
+        height: 120px;
+    }
+}
